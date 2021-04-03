@@ -21,7 +21,7 @@ class Counter extends Component {
 
   handleIncrement = () => {
     //event Handler, Biding Event Handler
-    console.log('Increment Done', this);
+    this.setState({ count: this.state.count + 1 }); //Updating State
   };
 
   render() {
