@@ -19,6 +19,7 @@ class Counter extends Component {
     );
   };
 
+  //passing event arguments
   handleIncrement = (product) => {
     console.log(product);
     //event Handler, Biding Event Handler
