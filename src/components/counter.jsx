@@ -3,21 +3,21 @@ import React, { Component } from 'react';
 class Counter extends Component {
   state = {
     count: 0,
-    tags: ['tag1', 'tag2', 'tag3'],
+    // tags: ['tag1', 'tag2', 'tag3'],
   };
 
-  renderTags = () => {
-    //Conditional Rendering
-    if (this.state.tags.length === 0) return <p>There are no Tags</p>;
+  // renderTags = () => {
+  //   //Conditional Rendering
+  //   if (this.state.tags.length === 0) return <p>There are no Tags</p>;
 
-    return (
-      <ul>
-        {this.state.tags.map((tag) => (
-          <li key={tag}>{tag} </li> //rendering lists
-        ))}
-      </ul>
-    );
-  };
+  //   return (
+  //     <ul>
+  //       {this.state.tags.map((tag) => (
+  //         <li key={tag}>{tag} </li> //rendering lists
+  //       ))}
+  //     </ul>
+  //   );
+  // };
 
   //passing event arguments
   handleIncrement = (product) => {
@@ -38,7 +38,7 @@ class Counter extends Component {
         >
           increment
         </button>
-        {this.renderTags()};
+        {/* {this.renderTags()}; */}
       </div>
     );
   }
