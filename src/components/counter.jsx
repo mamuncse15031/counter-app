@@ -16,6 +16,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
+        <h4>{this.props.id}</h4>
         <span className={this.getBadgeClasses()}>{this.formatCounter()}</span>
         <button
           onClick={() => {
