@@ -2,28 +2,15 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
   state = {
-    count: 0,
+    value: this.props.value,
     // tags: ['tag1', 'tag2', 'tag3'],
   };
-
-  // renderTags = () => {
-  //   //Conditional Rendering
-  //   if (this.state.tags.length === 0) return <p>There are no Tags</p>;
-
-  //   return (
-  //     <ul>
-  //       {this.state.tags.map((tag) => (
-  //         <li key={tag}>{tag} </li> //rendering lists
-  //       ))}
-  //     </ul>
-  //   );
-  // };
 
   //passing event arguments
   handleIncrement = (product) => {
     console.log(product);
     //event Handler, Biding Event Handler
-    this.setState({ count: this.state.count + 1 }); //Updating State
+    this.setState({ value: this.state.value + 1 }); //Updating State
   };
 
   render() {
@@ -45,16 +32,29 @@ class Counter extends Component {
 
   //expression embedding
   formatCounter = () => {
-    const { count } = this.state;
+    const { value: count } = this.state;
     return count === 0 ? 'Zero' : count;
   };
 
   //rendering classes dynamically
   getBadgeClasses = () => {
     let classes = 'badge m-2 badge-';
-    classes += this.state.count === 0 ? 'warning' : 'primary';
+    classes += this.state.value === 0 ? 'warning' : 'primary';
     return classes;
   };
+
+  // renderTags = () => {
+  //   //Conditional Rendering
+  //   if (this.state.tags.length === 0) return <p>There are no Tags</p>;
+
+  //   return (
+  //     <ul>
+  //       {this.state.tags.map((tag) => (
+  //         <li key={tag}>{tag} </li> //rendering lists
+  //       ))}
+  //     </ul>
+  //   );
+  // };
 }
 
 export default Counter;
