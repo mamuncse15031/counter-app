@@ -19,7 +19,6 @@ class Counter extends Component {
         >
           Delete
         </button>
-        {/* {this.renderTags()}; */}
       </div>
     );
   }
