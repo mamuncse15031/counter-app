@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
   render() {
+    const { onIncrement, counter, onDelete } = this.props; //destructuring
+
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCounter()}</span>
 
         <button
-          onClick={() => this.props.onIncrement(this.props.counter)}
+          onClick={() => onIncrement(counter)}
           className='btn btn-secondary btn-sm'
         >
           increment
         </button>
 
         <button
-          onClick={() => this.props.onDelete(this.props.counter.id)}
+          onClick={() => onDelete(counter.id)}
           className='btn-danger btn-sm m-2'
         >
           Delete
