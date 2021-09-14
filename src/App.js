@@ -13,7 +13,7 @@ class App extends Component {
   };
 
   handleIncrement = (counter) => {
-    const counters = [...this.state.counters];
+    const counters = [...this.state.counters]; //clone array
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
     counters[index].value++;
